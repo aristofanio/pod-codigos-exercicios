@@ -1,0 +1,13 @@
+package pod.q1.node3.impl;
+
+import pod.q1.node3.JdbcConnect;
+
+public class JdbcConnectImpl implements JdbcConnect {
+
+	@Override
+	public String query(String params) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

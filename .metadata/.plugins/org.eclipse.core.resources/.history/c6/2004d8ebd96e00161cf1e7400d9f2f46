@@ -1,0 +1,14 @@
+package pod.q1.node3.impl;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JdbcConnectImplTest {
+
+	@Test
+	public void testQuery() {
+		fail("Not yet implemented");
+	}
+
+}

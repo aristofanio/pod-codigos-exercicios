@@ -1,0 +1,8 @@
+package pod.q1.node2;
+
+import pod.q1.nodeserver.NodeServer;
+
+public interface ServicesOrchestration {
+	NodeServer configureServer(String serviceName, int port);
+	String query(String params);
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun pod.q1.node3.impl.JdbcConnectImplTest" project="q1-node3" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="pod.q1.node3.impl.JdbcConnectImplTest" time="0.12">
+    <testcase name="testQuery" classname="pod.q1.node3.impl.JdbcConnectImplTest" time="0.115"/>
+    <testcase name="testConnect" classname="pod.q1.node3.impl.JdbcConnectImplTest" time="0.005"/>
+  </testsuite>
+</testrun>

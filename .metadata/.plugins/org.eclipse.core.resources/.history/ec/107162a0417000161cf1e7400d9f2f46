@@ -1,0 +1,5 @@
+package pod.q3.inode1e2;
+
+public interface INode1e2 {
+
+}

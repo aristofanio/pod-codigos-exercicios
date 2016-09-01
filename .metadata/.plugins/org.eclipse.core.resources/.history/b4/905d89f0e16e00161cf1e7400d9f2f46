@@ -1,0 +1,15 @@
+package pod.q1.node2.impl;
+
+import java.rmi.RemoteException;
+
+import pod.q1.node2.OrchestrationServer;
+
+public class OrchestrationServerImpl implements OrchestrationServer {
+
+	@Override
+	public String query(String params) throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
