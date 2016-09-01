@@ -30,7 +30,7 @@ public class Node3ServerImpl extends UnicastRemoteObject implements INode3, INod
 		int port[] = new int[]{40000, 40001};
 		//decisão aleatória para o servidor
 		int porta = port[(int)(Math.random() * 2)/*0 ou 1*/];//40000 ou 40001
-		Registry registry = LocateRegistry.getRegistry(porta);
+		Registry registry = LocateRegistry.createRegistry(porta);
 		//log
 		if (porta == 40000) System.out.println("Operação 1 encaminhada para node 1.");
 		else System.out.println("Operação 1 encaminhada para node 2.");

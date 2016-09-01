@@ -51,7 +51,7 @@ public class Main {
 	}
 	
 	public static void main(String[] args) throws RemoteException, NotBoundException {
-		for (int i = 0; i < 10; i++){
+		for (int i = 0; i < 2; i++){
 			//requisicao para Op1
 			boolean isnode1 = ((int)(Math.random() * 1000) % 2) == 0;
 			testOp1(isnode1 ? 40000 : 40001);

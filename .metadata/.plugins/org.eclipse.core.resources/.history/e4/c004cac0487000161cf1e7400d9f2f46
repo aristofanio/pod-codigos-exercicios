@@ -1,5 +1,4 @@
 package pod.q3.node1;
-import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -22,18 +21,9 @@ public class Node1ServerImpl extends UnicastRemoteObject implements INode1e2, IN
 	
 	@Override
 	public void op2() throws RemoteException {
-		//
-		System.out.println("Operação 2 encaminhada para node 3.");
-		//
 		Registry registry = LocateRegistry.getRegistry(40002);
-		//
-		try {
-			INode3 node = (INode3) registry.lookup("Node3Server");
-			node.op2();
-		} 
-		catch (NotBoundException e) {
-			e.printStackTrace();
-		}
+		INode3 node = (INode3) registry.lookup("Node3Server");
+		node.op2();
 	}
 
 }
