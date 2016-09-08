@@ -1,0 +1,11 @@
+package pod.q5.node1;
+
+import pod.q5.node1.impl.Node1Impl;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Node1Impl impl = new Node1Impl();
+		impl.request();
+	}
+}

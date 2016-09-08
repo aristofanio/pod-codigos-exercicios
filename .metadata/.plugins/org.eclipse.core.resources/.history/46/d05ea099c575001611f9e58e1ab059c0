@@ -1,0 +1,25 @@
+package pod.q3.node2.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pod.q3.node2.Datastore;
+import pod.q5.share.INode2;
+
+public class INode2Impl implements INode2 {
+
+	@Override
+	public List<String> fetchAll(int offset) {
+		//
+		List<String> result = new ArrayList<>();
+		//
+		Datastore datastore = new DatastoreImpl();
+		List<String> list = datastore.listItems();
+		for (int i = offset; i < list.size(); i++){
+			result.add(list.get(i));
+		}
+		//
+		return result;
+	}
+
+}

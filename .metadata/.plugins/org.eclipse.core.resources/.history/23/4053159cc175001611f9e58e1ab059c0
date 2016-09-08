@@ -1,0 +1,21 @@
+package pod.q3.node2.impl;
+
+import java.util.List;
+
+import pod.q3.node2.Datastore;
+
+public class DatastoreImpl implements Datastore {
+
+	@Override
+	public void saveItem(String text) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<String> listItems() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,5 @@
+package pod.q5.node1;
+
+public interface Node1 {
+
+}

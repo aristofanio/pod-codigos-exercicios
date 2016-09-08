@@ -1,0 +1,7 @@
+package pod.q5.share;
+
+import java.util.List;
+
+public interface INode2 {
+	List<String> fetchAll(int offset);
+}

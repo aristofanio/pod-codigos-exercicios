@@ -1,0 +1,15 @@
+package pod.q3.node2.impl;
+
+import java.util.List;
+
+import pod.q3.node2.INode2;
+
+public class INode2Impl implements INode2 {
+
+	@Override
+	public List<String> fetchAll(int offset) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;pod.q5.node1.Node1&apos; to &apos;INode1&apos;&#x0A;- Original project: &apos;q5-node1&apos;&#x0A;- Original element: &apos;pod.q5.node1.Node1&apos;&#x0A;- Renamed element: &apos;pod.q5.node1.INode1&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Node1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;pod.q5.node1{Node1.java[Node1" matchStrategy="1" name="INode1" qualified="false" references="true" similarDeclarations="false" stamp="1473344103882" textual="false" version="1.0"/>
+</session>
