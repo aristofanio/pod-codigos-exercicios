@@ -6,7 +6,6 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 import pod.q9.share.INode2;
-import pod.q9.share.Listener;
 
 public class Node1 {
 
@@ -14,17 +13,15 @@ public class Node1 {
 		System.out.println("notify: " + text);
 	}
 	
+	@SuppressWarnings("serial")
 	public void registryInNode2(){
 		try {
 			Registry registry = LocateRegistry.getRegistry(40000);
 			INode2 node2 = (INode2) registry.lookup("Node2Server");
-			//
-			
-			//
-			node2.registryListener(new Listener() {
+			node2.registryListener(new ListenerImpl(){
 				@Override
-				public void notifyNode1(String text) {
-					printInfo(text);
+				public void notifyNode1(String text) throws RemoteException {
+					System.out.println(text);
 				}
 			});
 		} catch (RemoteException | NotBoundException e) {
