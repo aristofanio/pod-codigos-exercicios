@@ -1,0 +1,13 @@
+package pod.q9.node1;
+
+import pod.q9.share.Listener;
+
+public class ListenerImpl implements Listener {
+
+	@Override
+	public void notifyNode1(String text) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package pod.q9.node1;
+
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+
+import pod.q9.share.Listener;
+
+public class ListenerImpl extends UnicastRemoteObject implements Listener {
+
+	protected ListenerImpl() throws RemoteException {
+		super();
+	}
+
+	@Override
+	public void notifyNode1(String text) {
+		System.out.println(text);
+	}
+
+}

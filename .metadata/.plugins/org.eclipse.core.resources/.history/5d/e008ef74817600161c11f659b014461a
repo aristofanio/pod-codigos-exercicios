@@ -1,0 +1,9 @@
+package pod.q9.node1;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Node1 node = new Node1();
+		node.registryInNode2();
+	}
+}

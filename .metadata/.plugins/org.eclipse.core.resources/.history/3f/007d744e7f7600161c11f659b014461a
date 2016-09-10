@@ -1,0 +1,16 @@
+package pod.q9.node2;
+
+import java.rmi.RemoteException;
+
+import pod.q9.share.INode2;
+import pod.q9.share.Listener;
+
+public class Node2Impl implements INode2 {
+
+	@Override
+	public void registryListener(Listener listener) throws RemoteException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

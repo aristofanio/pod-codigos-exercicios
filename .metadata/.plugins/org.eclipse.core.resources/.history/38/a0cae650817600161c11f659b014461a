@@ -1,0 +1,5 @@
+package pod.q9.share;
+
+public interface Listener {
+	void notifyNode1(String text);
+}

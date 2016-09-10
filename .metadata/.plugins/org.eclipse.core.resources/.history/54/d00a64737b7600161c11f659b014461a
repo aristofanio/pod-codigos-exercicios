@@ -1,0 +1,11 @@
+package pod.q9.node3;
+
+public class Node3Impl implements INode3 {
+
+	@Override
+	public void update(String text) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -5,7 +5,27 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-09-08T14:13:49Z</updated>
+  <updated>2016-09-09T18:43:04Z</updated>
+  <entry>
+    <title>Spring Cloud Task 1.0.3.RELEASE and 1.1.0.M1 are now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/09/09/spring-cloud-task-1-0-3-release-and-1-1-0-m1-are-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2016-09-09:2609</id>
+    <updated>2016-09-09T18:43:04Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Cloud Task 1.0.3.RELEASE and 1.1.0.M1 are now available via Maven Central, Github and the Pivotal download repository. Many thanks to all of those who contributed to this release.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new-in-spring-cloud-task-1-0-3-release" class="anchor" name="what-rsquo-s-new-in-spring-cloud-task-1-0-3-release"&gt;&lt;/a&gt;What&amp;rsquo;s new in Spring Cloud Task 1.0.3.RELEASE&lt;/h2&gt;
+&lt;p&gt;1.0.3.RELEASE represents the next minor release for the 1.0.x branch. It&amp;rsquo;s a minor update that cleans up the dependency management within the project to be in alignment with how the rest of the Spring Cloud portfolio manages it&amp;rsquo;s dependencies.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-new-in-spring-cloud-task-1-1-0-m1" class="anchor" name="what-rsquo-s-new-in-spring-cloud-task-1-1-0-m1"&gt;&lt;/a&gt;What&amp;rsquo;s new in Spring Cloud Task 1.1.0.M1&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Task 1.1.0&amp;rsquo;s main theme is to improve overall support of task functionality and continue to migrate features that were found in Spring XD&amp;rsquo;s containers for batch jobs to Spring Cloud Task. The main updates for this release are the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Updated error message handling&lt;/em&gt; - This release adds a new column to the &lt;code&gt;TASK_EXECUTION&lt;/code&gt; table, &lt;code&gt;ERROR_MESSAGE&lt;/code&gt;. This new column will be where any exception that is thrown causing the failure of a task to be recorded (this is changed from the &lt;code&gt;EXIT_MESSAGE&lt;/code&gt; field in previous versions). This change allows for the &lt;code&gt;EXIT_MESSAGE&lt;/code&gt; field to be better utilized for orchestration of tasks.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Improved options for customizing the launch of partitioned job workers&lt;/em&gt; - When using the &lt;code&gt;DeployerPartitionHandler&lt;/code&gt;, 1.1.0 now provides abstractions around customizing the environment variables and command line arguments on a per partition basis. This is an improvement of the all or nothing option available in the 1.0.x branch.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next&lt;/h2&gt;
+&lt;p&gt;Spring Cloud Task 1.1.0 is expected to be GA before the end of the year in line with Spring Cloud Data Flow 1.1.0. Between now and then, we&amp;rsquo;ll be refining the partitioning model as well as adding additional capabilities to better integrate with Spring Cloud Data Flow.&lt;/p&gt;
+&lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task Home&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-task"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-cloud-task/current/reference/htmlsingle/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring for Apache Kafka 1.1.0 Milestone 2 Available</title>
     <link rel="alternate" href="https://spring.io/blog/2016/09/08/spring-for-apache-kafka-1-1-0-milestone-2-available" />
@@ -774,33 +794,5 @@ public Flux&amp;lt;WordCount&amp;gt; count (@Input(Processor.Input) Flux&amp;lt;
   &lt;li&gt;this is an interesting post on using Spring Boot and Let&amp;rsquo;s Encrypt to seamlessly &lt;a href="https://dzone.com/articles/spring-boot-secured-by-lets-encrypt"&gt;setup encryption for a Spring Boot application&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Rafael Salerno&amp;rsquo;s got a nice post up on &lt;a href="https://dzone.com/articles/spring-cloud-netflix-how-works-service-registratio"&gt;using Spring Cloud Netflix for service registration and discovery&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Spinnaker 1.0.0.M1</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/08/19/spring-cloud-spinnaker-1-0-0-m1" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Greg Turnquist</name>
-    </author>
-    <id>tag:spring.io,2016-08-19:2586</id>
-    <updated>2016-08-19T16:02:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;Greetings Spring community,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;I am happy to release the first milestone for &lt;a href="https://github.com/spring-cloud/spring-cloud-spinnaker"&gt;Spring Cloud Spinnaker&lt;/a&gt;. Spring Cloud Spinnaker bundles up the &lt;a href="http://www.spinnaker.io/"&gt;continuous delivery Spinnaker platform&lt;/a&gt;, and provides a 1-click installer to let you install it to any &lt;a href="https://www.cloudfoundry.org/use/cloud-foundry-certified/"&gt;certified Cloud Foundry provider&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;At this year&amp;#8217;s SpringOne Platform 2016 conference, there were two talks about Spinnaker. If you have early release access and missed them, you can watch right now. Otherwise you can catch them on the &lt;a href="http://spring.io/video"&gt;SpringDeveloper YouTube Channel&lt;/a&gt; once they are published.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;If your team/meetup/JUG is interested in hearing more about Spinnaker, &lt;a href="https://spring.io/team/gturnquist"&gt;check in with me&lt;/a&gt; and we can arrange a Google Hangout.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Cheers,&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-spinnaker"&gt;Source&lt;/a&gt; | &lt;a href="https://circleci.com/gh/spring-cloud/spring-cloud-spinnaker"&gt;PR CI&lt;/a&gt; | &lt;a href="https://jenkins.spring.io/view/All/job/spring-cloud-spinnaker/"&gt;Master CI&lt;/a&gt; | &lt;a href="http://www.spinnaker.io/docs"&gt;Docs&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spinnaker"&gt;Questions&lt;/a&gt; | &lt;a href="http://join.spinnaker.io/"&gt;Slack&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content>
   </entry>
 </feed>

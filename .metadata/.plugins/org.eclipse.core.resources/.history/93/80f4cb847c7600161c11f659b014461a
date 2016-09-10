@@ -1,0 +1,7 @@
+package pod.q9.node2;
+
+import java.rmi.Remote;
+
+public interface INode2 extends Remote{
+	void notify();
+}

@@ -1,0 +1,7 @@
+package pod.q9.share;
+
+import java.rmi.RemoteException;
+
+public interface Listener {
+	void notifyNode1(String text);
+}

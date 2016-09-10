@@ -1,0 +1,27 @@
+package pod.q9.node1;
+
+import java.rmi.RemoteException;
+
+import pod.q9.share.INode2;
+import pod.q9.share.Listener;
+
+public class Node1 {
+
+	public void printInfo(String text){
+		System.out.println("notify: " + text);
+	}
+	
+	public void registryInNode2(){
+		INode2 node2;
+		try {
+			node2.registryListener(new Listener() {
+				@Override
+				public void notifyNode1(String text) throws RemoteException {
+					printInfo(text);
+				}
+			});
+		} catch (RemoteException e) {
+			e.printStackTrace();
+		}
+	}
+}

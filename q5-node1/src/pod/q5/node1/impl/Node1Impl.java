@@ -13,9 +13,14 @@ import pod.q5.share.INode2;
 public class Node1Impl implements INode1 {
 	private static List<String> list = new ArrayList<>();
 	private int offset = 0;
+	
+	private void requestLocal(){
+		for (String s : list) {
+			System.out.println("local: " + s);
+		}
+	}
 
-	@Override
-	public void request() {
+	private boolean requestRemote(){
 		try{
 			Registry registry = LocateRegistry.getRegistry(40000);
 			INode2 node = (INode2) registry.lookup("Node2Server");
@@ -24,9 +29,17 @@ public class Node1Impl implements INode1 {
 			for (String s : list) {
 				System.out.println(s);
 			}
+			return true;
 		}
 		catch(IOException | NotBoundException e){
-			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	@Override
+	public void request() {
+		if (!requestRemote()){//
+			requestLocal();
 		}
 	}
 
@@ -34,7 +47,7 @@ public class Node1Impl implements INode1 {
 	public void sync() {
 		try{
 			Registry registry = LocateRegistry.getRegistry(40000);
-			INode2 node = (INode2) registry.lookup("Node1Server");
+			INode2 node = (INode2) registry.lookup("Node2Server");
 			List<String> list = node.fetchAll(offset);
 			store(list);
 		}

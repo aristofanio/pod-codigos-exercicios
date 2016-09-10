@@ -1,0 +1,21 @@
+package pod.q9.node1;
+
+import pod.q9.share.INode2;
+
+public class Node1 {
+
+	public void printInfo(String text){
+		System.out.println("notify: " + text);
+	}
+	
+	public void registryInNode2(){
+		INode2 node2;
+		//
+		while(true){
+			String text = node2.notifyNode1();
+			if (text != null){
+				printInfo(text);
+			}
+		}
+	}
+}

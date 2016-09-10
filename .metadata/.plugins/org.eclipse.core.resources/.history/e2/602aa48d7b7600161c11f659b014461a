@@ -1,0 +1,5 @@
+package pod.q9.node3;
+
+public interface INode3 {
+	void update(String text);
+}

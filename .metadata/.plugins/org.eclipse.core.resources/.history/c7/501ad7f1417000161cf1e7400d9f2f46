@@ -1,5 +1,0 @@
-package pod.q3.inode3;
-
-public interface INode3 {
-
-}
