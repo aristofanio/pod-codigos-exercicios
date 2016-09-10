@@ -9,13 +9,16 @@ import pod.q9.share.INode2;
 
 public class Main {
 
-	public static void main(String[] args) throws AlreadyBoundException, IOException {
+	public static void main(String[] args) throws AlreadyBoundException, IOException, InterruptedException {
 		System.out.println("Criando Node2");
 		INode2 node = new Node2Impl();
 		//
 		Registry registry = LocateRegistry.createRegistry(40000);
 		registry.bind("Node2Server", node);
 		//
-		((Node2Impl) node).check();
+		while(true){
+			((Node2Impl) node).check();
+			Thread.sleep(3000);
+		}
 	}
 }

@@ -38,7 +38,11 @@ public class Node2Impl extends UnicastRemoteObject implements INode2 {
 			String text = new String(b).trim();
 			if (!oldText.equals(text) && text != null){
 				oldText = text;
-				if (listener != null) listener.notifyNode1(text);
+				System.out.println("Encontrado texto diferente.");
+				if (listener != null) {
+					System.out.println("Notificando listener");
+					listener.notifyNode1(text);
+				}
 			}			
 		}
 	}
