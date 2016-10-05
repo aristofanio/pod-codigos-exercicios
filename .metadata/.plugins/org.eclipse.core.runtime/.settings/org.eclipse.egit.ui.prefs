@@ -1,0 +1,2 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\n<messages>\n<message>realizado o procedimento que falta. caminho indicado por wenstay e&\#x0A;natarajan... (faltou apenas dizer que era do lado do cliente).</message>\n<message>adicionado coment\u00E1rio para saber que o listener est\u00E1 funcionando.&\#x0A;adicionado um looping para checagem de altera\u00E7\u00E3o em node3.</message>\n<message>adicionado RemoteException na assinatura do m\u00E9todo uma vez que ele&\#x0A;estende Remote.</message>\n</messages>
+eclipse.preferences.version=1
