@@ -1,12 +1,9 @@
 package ag.pod.questao11;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.InetAddress;
 import java.net.Socket;
@@ -16,16 +13,16 @@ public class ServerForwarder {
   private int extractContentLength(DataInputStream reader) throws ServerForwarderException{
     //
     boolean contentLengthFound = false;
-    String line = null;
+    String line;
     int responseContentLength = -1;
     String key = "Content-length:".toLowerCase();
     //
     do {
       //recuperar as linhas
       try {
-        System.out.println("Iniciando processo de extração do tamanho do buufer.");
+        //System.out.println("Iniciando processo de extração do tamanho do buufer.");
         line = reader.readLine();
-        System.out.println(line);
+        //System.out.println(line);
       } 
       catch (IOException e) {
         throw new ServerForwarderException("error reading from server");
@@ -51,7 +48,6 @@ public class ServerForwarder {
   private void forwardRequest(DataInputStream input, Socket localServer) throws ServerForwarderException, IOException {
     //
     int length = extractContentLength(input);
-    System.out.println("Request Lenght: " + length);
     //
     DataInputStream clientIn = input;
     byte[] buffer = new byte[length];
@@ -107,8 +103,7 @@ public class ServerForwarder {
       System.out.println("----> response inicializado sucesso.");
       output.write("HTTP/1.0 200 OK\r\n".getBytes());
       output.write("Content-type: application/octet-stream\r\n".getBytes());
-      output.write(("content-lenght: " + buffer.length + "\r\n").getBytes());
-      output.write(("\r\n").getBytes());
+      output.write(("Content-length: " + buffer.length + "\r\n\r\n").getBytes());
       output.write(buffer);
       output.flush();
       System.out.println("----> response finalizado com sucesso.");

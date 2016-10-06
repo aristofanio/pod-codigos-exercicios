@@ -4,6 +4,6 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface Operacao extends Remote {
-  String SERVICE_NAME = "__MyService__";
-  String op() throws RemoteException;
+  String SERVICE_NAME = "__Service__";
+  String op2() throws RemoteException;
 }
